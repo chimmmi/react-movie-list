@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StarRating from "./StarRating";
 
+
 // const tempMovieData = [
 //   {
 //     imdbID: "tt1375666",
@@ -50,8 +51,8 @@ import StarRating from "./StarRating";
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
-
-const KEY = "2d36a065";
+console.log(process.env.REACT_APP_API_KEY)
+const KEY = process.env.REACT_APP_API_KEY;
 
 export default function App() {
   const [query, setQuery] = useState("");
